@@ -1,15 +1,20 @@
 AutoComplete Lightning
 ===================
-#### <i class="icon-pencil"></i> Step 1
+####  Step 1
  *  Register for new DE Edition  - https://developer.salesforce.com/en/signup
+####  Step 2
  *  Login to the newly created Developer Org and register a namespace by navigating to  Setup → Create → Packages, Click Edit and Register a namespace prefix (it can be anything simple and unique)
+####  Step 3
  *  Enable Lightning Components, Setup→ Develop → Lightning Component and check the box Enable Lightning Components and click save
+####  Step 4
  *  Install the below Unmanaged Package in your Salesforce Org - https://login.salesforce.com/packaging/installPackage.apexp?p0=04tB000000011BX
+####  Step 5
  *  Change the namespace in all the components installed via package to your org’s namespace. 
 Eg: Navigate to File→ Open Lightning Component →  requires.cmp. Change the below to your namespace  
 ```
 <aura:registerEvent name="requiresReady" type="stech2:requiresReady"/> 
 ```
+####  Step 6
  *  Open Developer Console, click on File → New → Apex class, name the apex class “AutoCompleteController” and copy paste the below code  
  ```
  public class AutocompleteController {
@@ -27,6 +32,7 @@ Eg: Navigate to File→ Open Lightning Component →  requires.cmp. Change the b
 }
 
  ```
+####  Step 7
  *  Open Developer Console, click on File → New → Lightning Event and name the event “autoCompleteEvt”, copy the below code
  ```
  <aura:event type="COMPONENT">
@@ -34,6 +40,7 @@ Eg: Navigate to File→ Open Lightning Component →  requires.cmp. Change the b
 </aura:event>
 
  ```
+####  Step 8
  * Open Developer Console, click on File → New → Lightning Component and name the component “autoComplete” and provide any description and copy the below code. (change the namespace accordingly) 
 ```
 <aura:component controller="stech2.AutocompleteController">
@@ -59,6 +66,7 @@ Eg: Navigate to File→ Open Lightning Component →  requires.cmp. Change the b
 </aura:component>
 
 ```
+####  Step 9
 * Click on the Controller option on the right and copy/paste the below code 
 ```
 ({
@@ -75,6 +83,7 @@ Eg: Navigate to File→ Open Lightning Component →  requires.cmp. Change the b
 })
 
 ```   
+####  Step 10
 *  Click on the Helper on the right and copy / paste the below code
 ```
 ({  
@@ -130,7 +139,7 @@ Eg: Navigate to File→ Open Lightning Component →  requires.cmp. Change the b
 })
 
 ```
-
+####  Step 11
 *   Click on the Rendered on the right and copy / paste the below code
 ```
 ({
@@ -142,7 +151,9 @@ Eg: Navigate to File→ Open Lightning Component →  requires.cmp. Change the b
 })
 
 ```
+####  Step 12
 *  Save the Component
+####  Step 13
 *  Create a Lightning App by clicking File → New → Lightning App. Name the app and copy/paste the code below (change the namespace)
 ```
 <aura:application>
@@ -164,6 +175,7 @@ Eg: Navigate to File→ Open Lightning Component →  requires.cmp. Change the b
 </aura:application>
 
 ```
+####  Step 14
 *  Add the below code to the Controller of the Lightning App
 ```
 ({

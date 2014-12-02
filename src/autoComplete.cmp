@@ -1,0 +1,21 @@
+<aura:component controller="stech2.AutocompleteController">
+    <aura:attribute name="sObjectType" required="true" type="String" description="Name of the sObject that will be filtered" />
+    <aura:attribute name="fields" type="String[]" default="" description="List of fields to get with each record"/>
+    <aura:attribute name="limit" type="Integer" default="10" description="Limits the number returned to this value" />
+    <aura:attribute name="inputLabel" type="String" default="Find" description="Label for text input"/>
+    <aura:attribute name="ready" type="Boolean" default="false" description="Used to check if resources have been loaded"/>
+
+    <aura:registerEvent name="autocompleteEvent" type="stech2:autocompleteEvt"/>
+    
+    <stech2:requires 
+        baseUrl="/resource/"
+		scripts="{jquery:'jquery/jquery.js',jqueryui:'jqueryui/jquery-ui.min.js', typeahead: 'typeahead/bootstrap.min.js'}"
+      	deps="{jqueryui:['jquery']}"
+                     styles="{typeahead:'typeahead/bootstrap.min.css',jqueryui:'jqueryui/jquery-ui.css',bs_autocomplete:'typeahead/bs_autocomplete.css'}"
+		requiresReady="c.init"
+    />
+            <div>
+        <label>Enter search term for {!v.sObjectType} </label>&nbsp;
+        <input class="autocomplete" type="text"/>
+    </div>
+</aura:component>
