@@ -158,12 +158,6 @@ Eg: Navigate to File→ Open Lightning Component →  requires.cmp. Change the b
 })
 
 ```
-<<<<<<< HEAD
-=======
-####  Step 12
-*  Save the Component
-
->>>>>>> 040743737af8b04040609e233d8ce5350bd20327
 ####  Step 13
 *  Save the Component
 
