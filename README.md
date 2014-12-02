@@ -1,15 +1,16 @@
 AutoComplete Lightning
 ===================
- 1. Register for new DE Edition  - https://developer.salesforce.com/en/signup
- 2.  Login to the newly created Developer Org and register a namespace by navigating to  Setup → Create → Packages, Click Edit and Register a namespace prefix (it can be anything simple and unique)
- 3.  Enable Lightning Components, Setup→ Develop → Lightning Component and check the box Enable Lightning Components and click save
- 4.  Install the below Unmanaged Package in your Salesforce Org - https://login.salesforce.com/packaging/installPackage.apexp?p0=04tB000000011BX
- 5.  Change the namespace in all the components installed via package to your org’s namespace. 
+#### <i class="icon-pencil"></i> Step 1
+ *  Register for new DE Edition  - https://developer.salesforce.com/en/signup
+ *  Login to the newly created Developer Org and register a namespace by navigating to  Setup → Create → Packages, Click Edit and Register a namespace prefix (it can be anything simple and unique)
+ *  Enable Lightning Components, Setup→ Develop → Lightning Component and check the box Enable Lightning Components and click save
+ *  Install the below Unmanaged Package in your Salesforce Org - https://login.salesforce.com/packaging/installPackage.apexp?p0=04tB000000011BX
+ *  Change the namespace in all the components installed via package to your org’s namespace. 
 Eg: Navigate to File→ Open Lightning Component →  requires.cmp. Change the below to your namespace  
 ```
 <aura:registerEvent name="requiresReady" type="stech2:requiresReady"/> 
 ```
- 6.  Open Developer Console, click on File → New → Apex class, name the apex class “AutoCompleteController” and copy paste the below code  
+ *  Open Developer Console, click on File → New → Apex class, name the apex class “AutoCompleteController” and copy paste the below code  
  ```
  public class AutocompleteController {
     @AuraEnabled
@@ -26,14 +27,14 @@ Eg: Navigate to File→ Open Lightning Component →  requires.cmp. Change the b
 }
 
  ```
- 7.  Open Developer Console, click on File → New → Lightning Event and name the event “autoCompleteEvt”, copy the below code
+ *  Open Developer Console, click on File → New → Lightning Event and name the event “autoCompleteEvt”, copy the below code
  ```
  <aura:event type="COMPONENT">
 		<aura:attribute name="selectedOption" type="Object"/>
 </aura:event>
 
  ```
- 9. Open Developer Console, click on File → New → Lightning Component and name the component “autoComplete” and provide any description and copy the below code. (change the namespace accordingly) 
+ * Open Developer Console, click on File → New → Lightning Component and name the component “autoComplete” and provide any description and copy the below code. (change the namespace accordingly) 
 ```
 <aura:component controller="stech2.AutocompleteController">
     <aura:attribute name="sObjectType" required="true" type="String" description="Name of the sObject that will be filtered" />
@@ -58,7 +59,7 @@ Eg: Navigate to File→ Open Lightning Component →  requires.cmp. Change the b
 </aura:component>
 
 ```
-10. Click on the Controller option on the right and copy/paste the below code 
+* Click on the Controller option on the right and copy/paste the below code 
 ```
 ({
     
@@ -74,7 +75,7 @@ Eg: Navigate to File→ Open Lightning Component →  requires.cmp. Change the b
 })
 
 ```   
-11.  Click on the Helper on the right and copy / paste the below code
+*  Click on the Helper on the right and copy / paste the below code
 ```
 ({  
     initHandlers: function(component) {
@@ -130,7 +131,7 @@ Eg: Navigate to File→ Open Lightning Component →  requires.cmp. Change the b
 
 ```
 
-12.  Click on the Rendered on the right and copy / paste the below code
+*   Click on the Rendered on the right and copy / paste the below code
 ```
 ({
     
@@ -141,8 +142,8 @@ Eg: Navigate to File→ Open Lightning Component →  requires.cmp. Change the b
 })
 
 ```
-13.  Save the Component
-14.  Create a Lightning App by clicking File → New → Lightning App. Name the app and copy/paste the code below (change the namespace)
+*  Save the Component
+*  Create a Lightning App by clicking File → New → Lightning App. Name the app and copy/paste the code below (change the namespace)
 ```
 <aura:application>
     <div class="container-fluid">
@@ -163,7 +164,7 @@ Eg: Navigate to File→ Open Lightning Component →  requires.cmp. Change the b
 </aura:application>
 
 ```
-15.  Add the below code to the Controller of the Lightning App
+*  Add the below code to the Controller of the Lightning App
 ```
 ({
     handleAutocomplete : function(component, event, helper) {
@@ -175,3 +176,5 @@ Eg: Navigate to File→ Open Lightning Component →  requires.cmp. Change the b
 ```
 
 Finally open the newly created Application.
+
+
