@@ -2,12 +2,16 @@ AutoComplete Lightning
 ===================
 ####  Step 1
  *  Register for new DE Edition  - https://developer.salesforce.com/en/signup
+
 ####  Step 2
  *  Login to the newly created Developer Org and register a namespace by navigating to  Setup → Create → Packages, Click Edit and Register a namespace prefix (it can be anything simple and unique)
+
 ####  Step 3
  *  Enable Lightning Components, Setup→ Develop → Lightning Component and check the box Enable Lightning Components and click save
+
 ####  Step 4
  *  Install the below Unmanaged Package in your Salesforce Org - https://login.salesforce.com/packaging/installPackage.apexp?p0=04tB000000011BX
+
 ####  Step 5
  *  Change the namespace in all the components installed via package to your org’s namespace. 
 Eg: Navigate to File→ Open Lightning Component →  requires.cmp. Change the below to your namespace  
