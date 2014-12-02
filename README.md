@@ -13,12 +13,15 @@ AutoComplete Lightning
  *  Install the below Unmanaged Package in your Salesforce Org - https://login.salesforce.com/packaging/installPackage.apexp?p0=04tB000000011BX
 
 ####  Step 5
+ *  Upload the jqueryui.resource and typeahead.resource to your static resources.
+
+####  Step 6
  *  Change the namespace in all the components installed via package to your org’s namespace. 
 Eg: Navigate to File→ Open Lightning Component →  requires.cmp. Change the below to your namespace  
 ```
 <aura:registerEvent name="requiresReady" type="stech2:requiresReady"/> 
 ```
-####  Step 6
+####  Step 7
  *  Open Developer Console, click on File → New → Apex class, name the apex class “AutoCompleteController” and copy paste the below code  
  ```
  public class AutocompleteController {
@@ -36,7 +39,7 @@ Eg: Navigate to File→ Open Lightning Component →  requires.cmp. Change the b
 }
 
  ```
-####  Step 7
+####  Step 8
  *  Open Developer Console, click on File → New → Lightning Event and name the event “autoCompleteEvt”, copy the below code
  ```
  <aura:event type="COMPONENT">
@@ -44,7 +47,7 @@ Eg: Navigate to File→ Open Lightning Component →  requires.cmp. Change the b
 </aura:event>
 
  ```
-####  Step 8
+####  Step 9
  * Open Developer Console, click on File → New → Lightning Component and name the component “autoComplete” and provide any description and copy the below code. (change the namespace accordingly) 
 ```
 <aura:component controller="stech2.AutocompleteController">
@@ -70,7 +73,7 @@ Eg: Navigate to File→ Open Lightning Component →  requires.cmp. Change the b
 </aura:component>
 
 ```
-####  Step 9
+####  Step 10
 * Click on the Controller option on the right and copy/paste the below code 
 ```
 ({
@@ -87,7 +90,7 @@ Eg: Navigate to File→ Open Lightning Component →  requires.cmp. Change the b
 })
 
 ```   
-####  Step 10
+####  Step 11
 *  Click on the Helper on the right and copy / paste the below code
 ```
 ({  
@@ -143,7 +146,7 @@ Eg: Navigate to File→ Open Lightning Component →  requires.cmp. Change the b
 })
 
 ```
-####  Step 11
+####  Step 12
 *   Click on the Rendered on the right and copy / paste the below code
 ```
 ({
@@ -155,9 +158,10 @@ Eg: Navigate to File→ Open Lightning Component →  requires.cmp. Change the b
 })
 
 ```
-####  Step 12
-*  Save the Component
 ####  Step 13
+*  Save the Component
+
+####  Step 14
 *  Create a Lightning App by clicking File → New → Lightning App. Name the app and copy/paste the code below (change the namespace)
 ```
 <aura:application>
@@ -179,7 +183,7 @@ Eg: Navigate to File→ Open Lightning Component →  requires.cmp. Change the b
 </aura:application>
 
 ```
-####  Step 14
+####  Step 15
 *  Add the below code to the Controller of the Lightning App
 ```
 ({
