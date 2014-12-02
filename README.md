@@ -157,6 +157,7 @@ Eg: Navigate to File→ Open Lightning Component →  requires.cmp. Change the b
 ```
 ####  Step 12
 *  Save the Component
+
 ####  Step 13
 *  Create a Lightning App by clicking File → New → Lightning App. Name the app and copy/paste the code below (change the namespace)
 ```
