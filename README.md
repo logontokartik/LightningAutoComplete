@@ -197,4 +197,8 @@ Eg: Navigate to File→ Open Lightning Component →  requires.cmp. Change the b
 
 Finally open the newly created Application.
 
+THANKS and CREDITS
+===================
+Special Thanks to Peter Knolle for his awesome blog on the AutoComplete Lightning Component
+- http://peterknolle.com/lightning-component-autocomplete/
 
